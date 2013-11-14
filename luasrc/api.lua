@@ -71,11 +71,13 @@ function api.write_result(output)
   return nil
 end
 
-api.pony_ping = pony_ping
-api.pony_dns = pony_dns
-api.pony_traceroute = pony_traceroute
-api.pony_fasttraceroute = pony_fasttraceroute
-api.pony_gethttp = pony_gethttp
+api.pony = {}
+
+api.pony.ping = pony_ping
+api.pony.dns = pony_dns
+api.pony.traceroute = pony_traceroute
+api.pony.fasttraceroute = pony_fasttraceroute
+api.pony.gethttp = pony_gethttp
 
 -- Useful functions from the Lua standard library. These are safe accoring to
 -- http://lua-users.org/wiki/SandBoxes.
