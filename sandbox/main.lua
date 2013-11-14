@@ -1,7 +1,7 @@
 local M = {}
 
 M.experiments = {
-  lookup_sample_domains = {
+  icl_iran_example = {
     interval_seconds = 0,
     num_runs = 1,
   },
