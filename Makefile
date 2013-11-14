@@ -4,6 +4,7 @@ BUILD_DIR ?= build
 SRCS = \
 	$(SRC_DIR)/dns.c \
 	$(SRC_DIR)/censorscope.c \
+	$(SRC_DIR)/ponyfunctions.c \
 	$(SRC_DIR)/sandbox.c \
 	$(SRC_DIR)/register.c \
 	$(SRC_DIR)/scheduling.c \
@@ -12,8 +13,8 @@ SRCS = \
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
 
 EXE ?= censorscope
-CFLAGS += `pkg-config lua5.1 --cflags` -g -Wall -std=gnu99
-LDFLAGS += `pkg-config lua5.1 --libs` -lldns -levent
+CFLAGS += `pkg-config --cflags lua5.1 python-2.7` -g -Wall -std=gnu99
+LDFLAGS += `pkg-config --libs lua5.1 python-2.7` -lldns -levent
 
 all: $(EXE)
 	echo $(BUILD_DIR)
