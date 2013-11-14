@@ -85,5 +85,7 @@ api.string = {}
 api.string.format = string.format
 api.tostring = tostring
 api.type = type
+api.table = {}
+api.table.concat = table.concat
 
 return api
